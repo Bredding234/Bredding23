@@ -1,0 +1,32 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package threads_synchronization;
+
+/**
+ *
+ * @author Bredding
+ */
+public class SleepUtilities {
+    public static void nap() {
+		nap(NAP_TIME);
+	}
+
+	/**
+	 * Nap between zero and duration seconds.
+	 */
+	public static void nap(int duration) {
+        	int sleeptime = (int) (NAP_TIME * Math.random() );
+        	try { Thread.sleep(sleeptime* 1000); }
+        	catch (InterruptedException e) {}
+	}
+
+	private static final int NAP_TIME = 10;
+
+    static void sleep(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+}
